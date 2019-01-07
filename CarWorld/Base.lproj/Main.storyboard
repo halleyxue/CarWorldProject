@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Tl-Ju-EKN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Welcome Page Controller-->
+        <scene sceneID="YFo-Uv-WMz">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <pageViewController storyboardIdentifier="WelcomeController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="4Tl-Ju-EKN" customClass="WelcomePageController" customModule="CarWorld" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eq8-YM-XYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="140"/>
+        </scene>
+        <!--Welcome Content View-->
+        <scene sceneID="DTl-cL-29b">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeContent" id="YD6-xl-ZPh" customClass="WelcomeContentView" customModule="CarWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oz9-my-uzh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rT-7f-UKK">
+                                <rect key="frame" x="109" y="80" width="157" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-Zn-8qD">
+                                <rect key="frame" x="37.5" y="139" width="300" height="232"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="M42-Qk-X6E"/>
+                                    <constraint firstAttribute="height" constant="232" id="hcp-9r-GJn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin your favorite restaurants and create your own food guide" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nm-ZF-LUP">
+                                <rect key="frame" x="60" y="396" width="255" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="bR9-4j-ggu"/>
+                                    <constraint firstAttribute="width" constant="282" id="k4u-65-Bxe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGl-T1-05Z">
+                                <rect key="frame" x="316" y="617" width="39" height="30"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="YD6-xl-ZPh" eventType="touchUpInside" id="9rS-bn-uG7"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="K1u-Se-YFh">
+                                <rect key="frame" x="168" y="610" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.31606095919999999" blue="0.37126074019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2rT-7f-UKK" firstAttribute="centerX" secondItem="oz9-my-uzh" secondAttribute="centerX" id="HQH-tK-Dbw"/>
+                            <constraint firstItem="6wS-Zn-8qD" firstAttribute="top" secondItem="2rT-7f-UKK" secondAttribute="bottom" constant="20" id="Hu7-bP-t1H"/>
+                            <constraint firstItem="wp2-6W-5vN" firstAttribute="bottom" secondItem="K1u-Se-YFh" secondAttribute="bottom" constant="20" id="IX9-9o-L7Q"/>
+                            <constraint firstItem="wp2-6W-5vN" firstAttribute="bottom" secondItem="UGl-T1-05Z" secondAttribute="bottom" constant="20" id="La2-Ld-MHa"/>
+                            <constraint firstItem="5nm-ZF-LUP" firstAttribute="top" secondItem="6wS-Zn-8qD" secondAttribute="bottom" constant="25" id="NwX-9s-i4m"/>
+                            <constraint firstItem="5nm-ZF-LUP" firstAttribute="centerX" secondItem="oz9-my-uzh" secondAttribute="centerX" id="QXh-g7-s4V"/>
+                            <constraint firstItem="wp2-6W-5vN" firstAttribute="trailing" secondItem="5nm-ZF-LUP" secondAttribute="trailing" constant="60" id="UXB-xP-z1Y"/>
+                            <constraint firstItem="5nm-ZF-LUP" firstAttribute="leading" secondItem="wp2-6W-5vN" secondAttribute="leading" constant="60" id="ZgZ-zF-gOp"/>
+                            <constraint firstItem="6wS-Zn-8qD" firstAttribute="centerX" secondItem="oz9-my-uzh" secondAttribute="centerX" id="cDN-MR-ZdB"/>
+                            <constraint firstItem="K1u-Se-YFh" firstAttribute="centerX" secondItem="oz9-my-uzh" secondAttribute="centerX" id="kBt-bC-adt"/>
+                            <constraint firstItem="wp2-6W-5vN" firstAttribute="trailing" secondItem="UGl-T1-05Z" secondAttribute="trailing" constant="20" id="lhn-20-4k3"/>
+                            <constraint firstItem="2rT-7f-UKK" firstAttribute="top" secondItem="wp2-6W-5vN" secondAttribute="top" constant="60" id="usz-4I-lUP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wp2-6W-5vN"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="6wS-Zn-8qD" id="87K-7R-mp9"/>
+                        <outlet property="contentLabel" destination="5nm-ZF-LUP" id="cCG-sx-byx"/>
+                        <outlet property="forwardButton" destination="UGl-T1-05Z" id="c4Y-Qe-XVz"/>
+                        <outlet property="headingLabel" destination="2rT-7f-UKK" id="mpg-iD-4nY"/>
+                        <outlet property="pageControl" destination="K1u-Se-YFh" id="CGk-BT-mkX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTQ-u5-fWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773.60000000000002" y="139.880059970015"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="q2a-Gu-JGc">
+            <objects>
+                <viewController storyboardIdentifier="LoginController" id="OZT-YA-EaA" customClass="LoginViewController" customModule="CarWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9CF-fk-aAw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="22q-Tq-G6A"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxU-D8-ARr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1698" y="140"/>
         </scene>
     </scenes>
 </document>
